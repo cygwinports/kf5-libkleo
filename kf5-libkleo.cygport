@@ -1,0 +1,26 @@
+inherit kf5
+
+NAME="kf5-libkleo"
+VERSION=17.12.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 PIM cryptography library"
+DESCRIPTION="This library provides a graphical interface to KDE applications
+which use cryptography."
+
+PKG_NAMES="libKF5Libkleo5 libKF5Libkleo-devel"
+libKF5Libkleo5_CONTENTS="
+	etc/xdg/libkleo*
+	usr/bin/cygKF5Libkleo-5.dll
+	usr/share/doc/${NAME}
+	usr/share/libkleopatra/
+	usr/share/locale/*/LC_MESSAGES/libkleopatra.mo
+"
+libKF5Libkleo_devel_REQUIRES="libboost-devel libgpgmepp-devel libKF5WidgetsAddons-devel libQt5Core-devel libQt5Gui-devel libqgpgme-qt5-devel"
+libKF5Libkleo_devel_CONTENTS="
+	usr/include/KF5/[Ll]ibkleo/
+	usr/include/KF5/libkleo_version.h
+	usr/lib/cmake/KF5Libkleo/
+	usr/lib/libKF5Libkleo.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_Libkleo.pri
+"
